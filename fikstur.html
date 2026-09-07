@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Başkent Tesla Gelişim Ligi — Ankara'nın genç basketbolcuları için gelişim platformu.">
+  <title>Fikstür | Başkent Tesla Gelişim Ligi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+   <header class="topbar">
+    <div class="site-width header-inner"><a class="brand" href="index.html" aria-label="Başkent Tesla Gelişim Ligi ana sayfa"> <span class="logo-wrap"> <img data-template-id="header-logo" class="canva-image" src="assets/images/bgl_logo.png" alt="Başkent Tesla Gelişim Ligi logosu"> </span> <span class="brand-name">Başkent Tesla<span>Gelişim Ligi</span></span> </a>
+     <nav id="mainNav" class="nav-links" aria-label="Ana navigasyon"><a class="nav-link canva-link" data-template-id="nav-home" href="index.html" style="color: rgb(215, 218, 222); font-weight: 700; font-style: normal; font-size: 16px;">Ana Sayfa</a> <a class="nav-link canva-link" data-template-id="nav-clubs" href="kulupler.html" style="color: rgb(215, 218, 222); font-weight: 700; font-style: normal; font-size: 16px;">Kulüpler</a> <a class="nav-link canva-link active" data-template-id="nav-fixtures" aria-current="page" href="fikstur.html" style="color: rgb(215, 218, 222); font-weight: 700; font-style: normal; font-size: 16px;">Fikstür</a>
+     </nav>
+     <div class="header-actions"><button class="join-button canva-button" data-template-id="header-join" type="button" data-open-modal="contactModal" style="background: rgb(227, 38, 46); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Bize Katılın</button> <button id="menuButton" class="menu-button" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mainNav">☰</button>
+     </div>
+    </div>
+   </header>
+   <main id="app">
+    <section id="fixturesView" class="route-view is-active" data-page="fikstur" aria-labelledby="fixtures-title">
+     <section class="inner-hero">
+      <div class="site-width"><span class="eyebrow canva-tag" data-template-id="fixtures-eyebrow" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 16px;">MAÇ MERKEZİ</span>
+       <h1 id="fixtures-title" class="section-title canva-text" data-template-id="fixtures-title-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 32px;">Fikstür Çok Yakında</h1>
+       <p class="section-copy canva-text" data-template-id="fixtures-copy" style="color: rgb(194, 199, 204); font-weight: 400; font-style: normal; font-size: 17px;">Maç programları, yaş kategorileri, karşılaşma saatleri ve salon bilgileri yakında burada yayınlanacak.</p>
+      </div>
+     </section>
+     <section class="section">
+      <div class="site-width">
+       <div class="fixture-stage" aria-label="Fikstür hazırlık animasyonu">
+        <div class="ball" aria-hidden="true"></div>
+       </div>
+       <div class="filter-panel canva-panel">
+        <h2 class="sr-only">Yakında aktif olacak fikstür filtreleri</h2>
+        <div class="filter-grid">
+         <div class="filter-field">
+          <label for="season">Sezon</label><select id="season" disabled=""><option>Yakında aktif</option></select><span class="soon-tag">Yakında aktif</span>
+         </div>
+         <div class="filter-field">
+          <label for="category">Yaş kategorisi</label><select id="category" disabled=""><option>Yakında aktif</option></select><span class="soon-tag">Yakında aktif</span>
+         </div>
+         <div class="filter-field">
+          <label for="gender">Kız / Erkek</label><select id="gender" disabled=""><option>Yakında aktif</option></select><span class="soon-tag">Yakında aktif</span>
+         </div>
+         <div class="filter-field">
+          <label for="week">Hafta</label><select id="week" disabled=""><option>Yakında aktif</option></select><span class="soon-tag">Yakında aktif</span>
+         </div>
+         <div class="filter-field">
+          <label for="club">Kulüp</label><select id="club" disabled=""><option>Yakında aktif</option></select><span class="soon-tag">Yakında aktif</span>
+         </div>
+        </div>
+       </div>
+       <div class="clubs-cta canva-panel">
+        <h2 class="section-title canva-text" data-template-id="fixture-cta-title" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Takvim Açıldığında İlk Siz Bilin</h2>
+        <p class="section-copy canva-text" data-template-id="fixture-cta-copy" style="color: rgb(194, 199, 204); font-weight: 400; font-style: normal; font-size: 17px;">Fikstür duyuruları için bildirim talebi bırakabilirsiniz.</p>
+        <div class="button-row" style="justify-content:center">
+         <button class="primary-button canva-button" data-template-id="fixture-cta-button" type="button" data-open-modal="notifyModal" style="background: rgb(227, 38, 46); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Fikstür Yayınlandığında Haberdar Ol</button>
+        </div>
+       </div>
+      </div>
+     </section>
+
+    </section>
+   </main>
+   <footer>
+    <div class="site-width footer-grid">
+     <div>
+      <div class="brand" style="margin-bottom:16px"><span class="logo-wrap"><img data-template-id="footer-logo" class="canva-image" loading="lazy" src="assets/images/bgl_logo.png" alt="Başkent Tesla Gelişim Ligi logosu"></span> <span class="brand-name">Başkent Tesla<span>Gelişim Ligi</span></span>
+      </div>
+      <p class="footer-copy canva-text" data-template-id="footer-copy" style="color: rgb(190, 196, 201); font-weight: 400; font-style: normal; font-size: 16px;">Ankara’dan Türk basketbolunun geleceğine.</p>
+     </div>
+     <div>
+      <h2 class="footer-heading canva-text" data-template-id="footer-nav-title" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 24px;">Keşfet</h2>
+      <ul class="footer-list">
+       <li><a class="canva-link" data-template-id="footer-home" href="index.html" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">Ana Sayfa</a></li>
+       <li><a class="canva-link" data-template-id="footer-clubs" href="kulupler.html" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">Kulüpler</a></li>
+       <li><a class="canva-link" data-template-id="footer-fixtures" href="fikstur.html" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">Fikstür</a></li>
+      </ul>
+     </div>
+     <div>
+      <h2 class="footer-heading canva-text" data-template-id="footer-contact-title" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 24px;">İletişim</h2>
+      <ul class="footer-list">
+       <li data-template-id="footer-email" class="canva-text" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">[e-posta eklenecek]</li>
+       <li data-template-id="footer-phone" class="canva-text" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">[telefon eklenecek]</li>
+      </ul>
+      <div class="socials" aria-label="Sosyal medya bağlantıları"><span class="social-slot canva-tag" data-template-id="social-instagram" style="background: rgb(10, 12, 14); color: rgb(191, 196, 200); font-weight: 400; font-style: normal; font-size: 16px;">Instagram</span> <span class="social-slot canva-tag" data-template-id="social-youtube" style="background: rgb(10, 12, 14); color: rgb(191, 196, 200); font-weight: 400; font-style: normal; font-size: 16px;">YouTube</span> <span class="social-slot canva-tag" data-template-id="social-other" style="background: rgb(10, 12, 14); color: rgb(191, 196, 200); font-weight: 400; font-style: normal; font-size: 16px;">Diğer sosyal</span>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <div id="contactModal" class="modal-backdrop" role="presentation">
+   <section class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+    <div class="modal-head">
+     <div>
+      <h2 id="contactModalTitle" data-template-id="contact-modal-title" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Bize Katılın</h2>
+      <p class="modal-copy canva-text" data-template-id="contact-modal-copy" style="color: rgb(200, 205, 210); font-weight: 400; font-style: normal; font-size: 16px;">Kulüp başvurusu ve iş birliği için iletişim bilgileri yakında burada olacak.</p>
+     </div><button class="close-button" type="button" data-close-modal="contactModal" aria-label="Modalı kapat">×</button>
+    </div>
+    <form id="contactForm">
+     <div class="form-group">
+      <label for="contactEmail" data-template-id="contact-email-label" class="canva-text" style="color: rgb(244, 245, 246); font-weight: 800; font-style: normal; font-size: 16px;">E-posta</label><input id="contactEmail" type="email" required="" autocomplete="email">
+     </div>
+     <div class="form-group">
+      <label for="contactMessage" data-template-id="contact-message-label" class="canva-text" style="color: rgb(244, 245, 246); font-weight: 800; font-style: normal; font-size: 16px;">Mesajınız</label><textarea id="contactMessage" required=""></textarea>
+     </div>
+     <div class="modal-actions">
+      <button id="contactSubmit" class="primary-button canva-button" data-template-id="contact-submit" type="submit" style="background: rgb(227, 38, 46); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Talep Gönder</button><button class="secondary-button canva-button" data-template-id="contact-cancel" type="button" data-close-modal="contactModal" style="background: rgb(23, 26, 30); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Vazgeç</button>
+     </div>
+     <p id="contactMessageStatus" class="form-message" aria-live="polite"></p>
+    </form>
+   </section>
+  </div>
+  <div id="notifyModal" class="modal-backdrop" role="presentation">
+   <section class="modal" role="dialog" aria-modal="true" aria-labelledby="notifyModalTitle">
+    <div class="modal-head">
+     <div>
+      <h2 id="notifyModalTitle" data-template-id="notify-modal-title" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Fikstür Bildirimi</h2>
+      <p class="modal-copy canva-text" data-template-id="notify-modal-copy" style="color: rgb(200, 205, 210); font-weight: 400; font-style: normal; font-size: 16px;">Fikstür duyuruları için e-posta adresinizi bırakın.</p>
+     </div><button class="close-button" type="button" data-close-modal="notifyModal" aria-label="Modalı kapat">×</button>
+    </div>
+    <form id="notifyForm">
+     <div class="form-group">
+      <label for="notifyEmail" data-template-id="notify-email-label" class="canva-text" style="color: rgb(244, 245, 246); font-weight: 800; font-style: normal; font-size: 16px;">E-posta</label><input id="notifyEmail" type="email" required="" autocomplete="email">
+     </div>
+     <div class="modal-actions">
+      <button id="notifySubmit" class="primary-button canva-button" data-template-id="notify-submit" type="submit" style="background: rgb(227, 38, 46); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Bildirim Talebi Oluştur</button><button class="secondary-button canva-button" data-template-id="notify-cancel" type="button" data-close-modal="notifyModal" style="background: rgb(23, 26, 30); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Vazgeç</button>
+     </div>
+     <p id="notifyMessageStatus" class="form-message" aria-live="polite"></p>
+    </form>
+   </section>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

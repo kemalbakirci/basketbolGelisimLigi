@@ -7,7 +7,7 @@
 const HOME_CONTACT = {
   email: "baskentgelisimligi@gmail.com",
   whatsapp: "https://wa.me/905323351001",
-  instagram: "",
+  instagram: "https://www.instagram.com/baskentgelisimligi/",
   youtube: ""
 };
 

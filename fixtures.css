@@ -1,0 +1,38 @@
+/* Fikstür teması: styles.css dosyasından sonra yüklenir. */
+.fixtures-page .inner-hero { padding: 78px 0 52px; background: radial-gradient(ellipse at 85% 20%,#254536,transparent 60%),#0b1411; border-color: #354b3e; }
+.fixtures-page .inner-hero .section-title { max-width: 1050px; margin: 22px 0 24px; font-size: clamp(40px,6.2vw,78px); line-height: 1.08; }
+.fixtures-page .inner-hero h1 span { color: var(--green); }
+.fixtures-page .inner-hero .section-copy { margin: 0; max-width: 780px; font-size: 18px; }
+.fixtures-page .fixture-stage { min-height: 290px; background: linear-gradient(125deg,#1d442c,#12271b); border-color: #486b52; border-radius: 16px; }
+.fixtures-page .fixture-stage::before { border-color: #a1d0af40; }
+.fixtures-page .fixture-stage::after { background: #a1d0af40; }
+.fixtures-page .ball { background: #ffa24c; }
+.fixtures-page .filter-panel { margin-top: 24px; padding: 28px; background: #f0f5ef; border: 1px solid #bfd5c4; border-radius: 14px; }
+.fixtures-page .filter-grid { grid-template-columns: repeat(5,minmax(0,1fr)); gap: 16px; }
+.fixtures-page .filter-field { min-width: 0; }
+.fixtures-page .filter-field label { color: #203d2a; font-size: 14px; line-height: 1.5; }
+.fixtures-page .filter-field select { min-height: 48px; border-radius: 8px; background: #e2eae1; border: 1px solid #acbeaf; color: #4d6555; font-size: 16px; opacity: 1; cursor: not-allowed; }
+.fixtures-page .soon-tag { color: #47604e; font-size: 13px; }
+.fixtures-page .clubs-cta { margin-top: 40px; padding: 44px; background: #183e29; border: 1px solid #486b52; border-radius: 16px; }
+.fixtures-page .clubs-cta .section-title { margin: 0 auto 20px; font-size: clamp(30px,4vw,46px); line-height: 1.15; }
+.fixtures-page .clubs-cta .section-copy { color: #d2e5d8; }
+.fixtures-page .fixture-actions { justify-content: center; }
+.fixtures-page #notifyDialog { width: min(520px,calc(100% - 32px)); max-height: calc(100dvh - 40px); padding: 28px; background: #12271b; color: #f5f8f6; border: 1px solid #557c60; border-radius: 16px; overflow: auto; }
+.fixtures-page #notifyDialog::backdrop { background: #040b08bd; }
+.fixtures-page #notifyTitle { font-size: 28px; line-height: 1.2; margin-bottom: 20px; }
+.fixtures-page .close-button { flex: 0 0 42px; width: 42px; height: 42px; border-radius: 8px; }
+.fixtures-page .form-group input { background: #09180e; border-color: #5c7a63; border-radius: 8px; font-size: 16px; }
+.fixtures-page .form-message { color: #afedc2; line-height: 1.6; }
+body.fixture-dialog-open { overflow: hidden; }
+@media(max-width: 860px) {
+  .fixtures-page .filter-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(max-width: 560px) {
+  .fixtures-page .inner-hero { padding: 54px 0 40px; }
+  .fixtures-page .filter-grid { grid-template-columns: minmax(0,1fr); }
+  .fixtures-page .filter-panel, .fixtures-page .clubs-cta { padding: 24px; }
+  .fixtures-page .fixture-stage { min-height: 250px; }
+}
+@media(prefers-reduced-motion: reduce) {
+  .fixtures-page .ball { animation: none; transform: none; }
+}

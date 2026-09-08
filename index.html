@@ -3,183 +3,137 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Başkent Tesla Gelişim Ligi — Ankara'nın genç basketbolcuları için gelişim platformu.">
+  <meta name="description" content="Başkent Tesla Gelişim Ligi — Ankara'nın genç basketbolcuları için gelişim, adil rekabet ve iş birliği platformu.">
   <title>Başkent Tesla Gelişim Ligi</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="home.js" defer></script>
 </head>
-<body>
+<body class="home-page">
+  <a class="skip-link" href="#app">İçeriğe geç</a>
   <div class="shell">
-   <header class="topbar">
-    <div class="site-width header-inner"><a class="brand" href="index.html" aria-label="Başkent Tesla Gelişim Ligi ana sayfa"> <span class="logo-wrap"> <img data-template-id="header-logo" class="canva-image" src="assets/images/bgl_logo.png" alt="Başkent Tesla Gelişim Ligi logosu"> </span> <span class="brand-name">Başkent Tesla<span>Gelişim Ligi</span></span> </a>
-     <nav id="mainNav" class="nav-links" aria-label="Ana navigasyon"><a class="nav-link canva-link active" data-template-id="nav-home" aria-current="page" href="index.html" style="color: rgb(215, 218, 222); font-weight: 700; font-style: normal; font-size: 16px;">Ana Sayfa</a> <a class="nav-link canva-link" data-template-id="nav-clubs" href="kulupler.html" style="color: rgb(215, 218, 222); font-weight: 700; font-style: normal; font-size: 16px;">Kulüpler</a> <a class="nav-link canva-link" data-template-id="nav-fixtures" href="fikstur.html" style="color: rgb(215, 218, 222); font-weight: 700; font-style: normal; font-size: 16px;">Fikstür</a>
-     </nav>
-     <div class="header-actions"><button class="join-button canva-button" data-template-id="header-join" type="button" data-open-modal="contactModal" style="background: rgb(227, 38, 46); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Bize Katılın</button> <button id="menuButton" class="menu-button" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mainNav">☰</button>
-     </div>
-    </div>
-   </header>
-   <main id="app">
-    <section id="homeView" class="route-view is-active" data-page="index" aria-labelledby="hero-title">
-     <section class="hero" id="hero">
-      <div class="site-width hero-grid">
-       <div><span class="eyebrow canva-tag" data-template-id="hero-eyebrow" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 16px;">ANKARA • 2026</span>
-        <h1 id="hero-title" class="hero-title canva-text" data-template-id="hero-title-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 32px;">Gelecek Sahada Gelişiyor.</h1>
-        <p class="hero-copy canva-text" data-template-id="hero-copy-text" style="color: rgb(211, 214, 218); font-weight: 400; font-style: normal; font-size: 18px;">Ankara’nın genç yeteneklerini adil rekabet, güçlü değerler ve ortak bir basketbol kültürü etrafında buluşturuyoruz.</p>
-        <div class="button-row"><a class="primary-button canva-button" data-template-id="hero-discover" href="kulupler.html" style="background: rgb(227, 38, 46); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Ligi Keşfet</a> <button class="secondary-button canva-button" data-template-id="hero-apply" type="button" data-open-modal="contactModal" style="background: rgb(23, 26, 30); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Kulüpler İçin Başvuru</button>
+    <header class="topbar">
+      <div class="site-width header-inner">
+        <a class="brand" href="index.html" aria-label="Başkent Tesla Gelişim Ligi ana sayfa">
+          <span class="logo-wrap"><img src="assets/images/bgl_logo.png" alt="" width="56" height="56"></span>
+          <span class="brand-name">Başkent Tesla<span>Gelişim Ligi</span></span>
+        </a>
+        <nav id="mainNav" class="nav-links" aria-label="Ana navigasyon">
+          <a class="nav-link active" aria-current="page" href="index.html">Ana Sayfa</a>
+          <a class="nav-link" href="kulupler.html">Kulüpler</a>
+          <a class="nav-link" href="fikstur.html">Fikstür</a>
+        </nav>
+        <div class="header-actions">
+          <a class="join-button" href="#iletisim">Bize Katılın</a>
+          <button id="menuButton" class="menu-button" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mainNav">☰</button>
         </div>
-        <div class="trust-row" aria-label="Lig özellikleri"><span class="trust-item canva-tag" data-template-id="trust-1" style="background: rgb(26, 29, 33); color: rgb(217, 221, 224); font-weight: 700; font-style: normal; font-size: 16px;">Gelişim odaklı</span> <span class="trust-item canva-tag" data-template-id="trust-2" style="background: rgb(26, 29, 33); color: rgb(217, 221, 224); font-weight: 700; font-style: normal; font-size: 16px;">Kız ve erkek kategorileri</span> <span class="trust-item canva-tag" data-template-id="trust-3" style="background: rgb(26, 29, 33); color: rgb(217, 221, 224); font-weight: 700; font-style: normal; font-size: 16px;">Ankara merkezli</span>
-        </div>
-       </div>
-       <div class="hero-mark" aria-label="Lig logo alanı"><span class="logo-wrap"> <img data-template-id="hero-logo" class="canva-image" src="assets/images/bgl_logo.png" alt="Başkent Tesla Gelişim Ligi logosu"> </span>
-       </div>
       </div>
-     </section>
-     <section class="section">
-      <div class="site-width">
-       <div class="split-heading">
-        <div><span class="eyebrow canva-tag" data-template-id="about-eyebrow" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 16px;">GELİŞİM PLATFORMU</span>
-         <h2 class="section-title canva-text" data-template-id="about-title" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Bir Ligden Daha Fazlası</h2>
-        </div>
-        <p class="section-copy canva-text" data-template-id="about-copy" style="color: rgb(194, 199, 204); font-weight: 400; font-style: normal; font-size: 17px;">Başkent Tesla Gelişim Ligi, farklı alt yaş kategorilerindeki kız ve erkek basketbolcuları güvenli, adil ve rekabetçi bir ortamda buluşturan bir gelişim platformudur. Sporcuları, antrenörleri, hakemleri, kulüpleri ve aileleri aynı gelişim kültürünün parçası haline getirerek Ankara basketbolunun bugününü ve geleceğini birlikte güçlendiriyoruz.</p>
-       </div>
-       <div class="info-grid">
-       </div>
-      </div>
-     </section>
-     <section class="section broadcast">
-      <div class="site-width broadcast-grid">
-       <div><span class="eyebrow canva-tag" data-template-id="broadcast-eyebrow" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 16px;">DİJİTAL DENEYİM</span>
-        <h2 class="section-title canva-text" data-template-id="broadcast-title" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Maçlar Canlı, Heyecan Her Yerde</h2>
-        <p class="section-copy canva-text" data-template-id="broadcast-copy" style="color: rgb(194, 199, 204); font-weight: 400; font-style: normal; font-size: 17px;">Başkent Tesla Gelişim Ligi karşılaşmaları canlı yayınlarla basketbolseverlerle buluşacak. Aileler, kulüpler ve taraftarlar genç sporcuların gelişim yolculuğunu bulundukları her yerden takip edebilecek.</p>
-       </div>
-       <div class="player" aria-label="Canlı yayın hazırlık görünümü">
-        <div class="player-top">
-         <span>BTGL / MAÇ MERKEZİ</span><span class="waiting-badge canva-tag" data-template-id="broadcast-badge" style="background: rgb(227, 38, 46); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">YAYIN HAZIRLANIYOR</span>
-        </div>
-        <div class="score-placeholder" aria-label="Skor henüz açıklanmadı">
-         -- : --
-        </div>
-        <div class="play-mark" aria-hidden="true">
-         ▶
-        </div>
-        <div class="player-status canva-text" data-template-id="broadcast-status" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 16px;">Yayınlar Yakında</div>
-       </div>
-      </div>
-     </section>
-     <section class="section">
-      <div class="site-width"><span class="eyebrow canva-tag" data-template-id="mission-eyebrow" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 16px;">HEDEFİMİZ</span>
-       <h2 class="section-title canva-text" data-template-id="mission-title" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Sahadan Daha Büyük Bir Hedef</h2>
-       <div class="mission-grid">
-        <article class="mission-card reveal canva-card">
-         <h3 data-template-id="vision-title" class="canva-text" style="color: rgb(244, 122, 32); font-weight: 700; font-style: normal; font-size: 19px;">Vizyonumuz:</h3>
-         <p data-template-id="vision-copy" class="canva-text" style="color: rgb(224, 226, 228); font-weight: 400; font-style: normal; font-size: 16px;">Ankara’yı altyapı basketbolunda örnek bir model haline getirerek; nitelikli, özgüvenli ve değerlerine bağlı sporcuların yetiştiği, Türk basketboluna sürdürülebilir katkı sağlayan bir gelişim platformu olmak.</p>
-        </article>
-        <article class="mission-card reveal canva-card">
-         <h3 data-template-id="mission-card-title" class="canva-text" style="color: rgb(244, 122, 32); font-weight: 700; font-style: normal; font-size: 19px;">Misyonumuz:</h3>
-         <p data-template-id="mission-card-copy" class="canva-text" style="color: rgb(224, 226, 228); font-weight: 400; font-style: normal; font-size: 16px;">Çocuklarımıza ve gençlerimize güvenli, adil ve rekabetçi bir ortamda basketbol oynama fırsatı sunmak; sporcu, antrenör, hakem, kulüp ve ailelerin birlikte geliştiği bir ekosistem oluşturup Ankara basketbolunun bugününü ve yarınlarını güçlendirmek.</p>
-        </article>
-       </div>
-      </div>
-     </section>
-     <section class="cta-band">
-      <div class="site-width cta-inner">
-       <div><span class="eyebrow canva-tag" data-template-id="home-cta-eyebrow" style="color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">KULÜPLER İÇİN</span>
-        <h2 class="cta-title canva-text" data-template-id="home-cta-title" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Ankara Basketbolunun Geleceğinde Yerinizi Alın</h2>
-        <p data-template-id="home-cta-copy" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 16px;">Gelişimi skorun önüne koyan, sporcularına sürdürülebilir bir rekabet ortamı sunmak isteyen kulüpleri Başkent Tesla Gelişim Ligi’ne davet ediyoruz.</p>
-       </div>
-       <div class="button-row"><button class="secondary-button canva-button" data-template-id="home-contact-button" type="button" data-open-modal="contactModal" style="background: rgb(143, 24, 32); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">İş Birliği İçin İletişime Geç</button> <a class="secondary-button canva-button" data-template-id="home-clubs-button" href="kulupler.html" style="background: rgb(143, 24, 32); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Kulüpleri İncele</a>
-       </div>
-      </div>
-     </section>
-     <!-- Yeni bir kulüp eklemek için ilk gruba bir logo ekleyip aynısını aria-hidden gruba da ekleyin. -->
-     <section class="logo-strip" aria-label="İş birliği yapılan kulüpler">
-      <div class="logo-track">
-       <figure class="club-logo-slot"><img src="assets/images/kulup_logo1.png" alt="İş birliği yapılan 1. kulübün logosu"></figure>
-       <figure class="club-logo-slot"><img src="assets/images/kulup_logo2.png" alt="İş birliği yapılan 2. kulübün logosu"></figure>
-       <figure class="club-logo-slot"><img src="assets/images/kulup_logo3.png" alt="İş birliği yapılan 3. kulübün logosu"></figure>
-       <figure class="club-logo-slot"><img src="assets/images/kulup_logo4.png" alt="İş birliği yapılan 4. kulübün logosu"></figure>
-       <figure class="club-logo-slot"><img src="assets/images/kulup_logo5.png" alt="İş birliği yapılan 5. kulübün logosu"></figure>
-       <figure class="club-logo-slot"><img src="assets/images/kulup_logo6.png" alt="İş birliği yapılan 6. kulübün logosu"></figure>
-       <figure class="club-logo-slot" aria-hidden="true"><img src="assets/images/kulup_logo1.png" alt=""></figure>
-       <figure class="club-logo-slot" aria-hidden="true"><img src="assets/images/kulup_logo2.png" alt=""></figure>
-       <figure class="club-logo-slot" aria-hidden="true"><img src="assets/images/kulup_logo3.png" alt=""></figure>
-       <figure class="club-logo-slot" aria-hidden="true"><img src="assets/images/kulup_logo4.png" alt=""></figure>
-       <figure class="club-logo-slot" aria-hidden="true"><img src="assets/images/kulup_logo5.png" alt=""></figure>
-       <figure class="club-logo-slot" aria-hidden="true"><img src="assets/images/kulup_logo6.png" alt=""></figure>
-      </div>
-     </section>
+    </header>
 
-    </section>
-   </main>
-   <footer>
-    <div class="site-width footer-grid">
-     <div>
-      <div class="brand" style="margin-bottom:16px"><span class="logo-wrap"><img data-template-id="footer-logo" class="canva-image" loading="lazy" src="assets/images/bgl_logo.png" alt="Başkent Tesla Gelişim Ligi logosu"></span> <span class="brand-name">Başkent Tesla<span>Gelişim Ligi</span></span>
-      </div>
-      <p class="footer-copy canva-text" data-template-id="footer-copy" style="color: rgb(190, 196, 201); font-weight: 400; font-style: normal; font-size: 16px;">Ankara’dan Türk basketbolunun geleceğine.</p>
-     </div>
-     <div>
-      <h2 class="footer-heading canva-text" data-template-id="footer-nav-title" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 24px;">Keşfet</h2>
-      <ul class="footer-list">
-       <li><a class="canva-link" data-template-id="footer-home" href="index.html" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">Ana Sayfa</a></li>
-       <li><a class="canva-link" data-template-id="footer-clubs" href="kulupler.html" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">Kulüpler</a></li>
-       <li><a class="canva-link" data-template-id="footer-fixtures" href="fikstur.html" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">Fikstür</a></li>
-      </ul>
-     </div>
-     <div>
-      <h2 class="footer-heading canva-text" data-template-id="footer-contact-title" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 24px;">İletişim</h2>
-      <ul class="footer-list">
-       <li data-template-id="footer-email" class="canva-text" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">[e-posta eklenecek]</li>
-       <li data-template-id="footer-phone" class="canva-text" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">[telefon eklenecek]</li>
-      </ul>
-      <div class="socials" aria-label="Sosyal medya bağlantıları"><span class="social-slot canva-tag" data-template-id="social-instagram" style="background: rgb(10, 12, 14); color: rgb(191, 196, 200); font-weight: 400; font-style: normal; font-size: 16px;">Instagram</span> <span class="social-slot canva-tag" data-template-id="social-youtube" style="background: rgb(10, 12, 14); color: rgb(191, 196, 200); font-weight: 400; font-style: normal; font-size: 16px;">YouTube</span> <span class="social-slot canva-tag" data-template-id="social-other" style="background: rgb(10, 12, 14); color: rgb(191, 196, 200); font-weight: 400; font-style: normal; font-size: 16px;">Diğer sosyal</span>
-      </div>
-     </div>
-    </div>
-   </footer>
-  </div>
-  <div id="contactModal" class="modal-backdrop" role="presentation">
-   <section class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
-    <div class="modal-head">
-     <div>
-      <h2 id="contactModalTitle" data-template-id="contact-modal-title" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Bize Katılın</h2>
-      <p class="modal-copy canva-text" data-template-id="contact-modal-copy" style="color: rgb(200, 205, 210); font-weight: 400; font-style: normal; font-size: 16px;">Kulüp başvurusu ve iş birliği için iletişim bilgileri yakında burada olacak.</p>
-     </div><button class="close-button" type="button" data-close-modal="contactModal" aria-label="Modalı kapat">×</button>
-    </div>
-    <form id="contactForm">
-     <div class="form-group">
-      <label for="contactEmail" data-template-id="contact-email-label" class="canva-text" style="color: rgb(244, 245, 246); font-weight: 800; font-style: normal; font-size: 16px;">E-posta</label><input id="contactEmail" type="email" required="" autocomplete="email">
-     </div>
-     <div class="form-group">
-      <label for="contactMessage" data-template-id="contact-message-label" class="canva-text" style="color: rgb(244, 245, 246); font-weight: 800; font-style: normal; font-size: 16px;">Mesajınız</label><textarea id="contactMessage" required=""></textarea>
-     </div>
-     <div class="modal-actions">
-      <button id="contactSubmit" class="primary-button canva-button" data-template-id="contact-submit" type="submit" style="background: rgb(227, 38, 46); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Talep Gönder</button><button class="secondary-button canva-button" data-template-id="contact-cancel" type="button" data-close-modal="contactModal" style="background: rgb(23, 26, 30); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Vazgeç</button>
-     </div>
-     <p id="contactMessageStatus" class="form-message" aria-live="polite"></p>
-    </form>
-   </section>
-  </div>
-  <div id="notifyModal" class="modal-backdrop" role="presentation">
-   <section class="modal" role="dialog" aria-modal="true" aria-labelledby="notifyModalTitle">
-    <div class="modal-head">
-     <div>
-      <h2 id="notifyModalTitle" data-template-id="notify-modal-title" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 24px;">Fikstür Bildirimi</h2>
-      <p class="modal-copy canva-text" data-template-id="notify-modal-copy" style="color: rgb(200, 205, 210); font-weight: 400; font-style: normal; font-size: 16px;">Fikstür duyuruları için e-posta adresinizi bırakın.</p>
-     </div><button class="close-button" type="button" data-close-modal="notifyModal" aria-label="Modalı kapat">×</button>
-    </div>
-    <form id="notifyForm">
-     <div class="form-group">
-      <label for="notifyEmail" data-template-id="notify-email-label" class="canva-text" style="color: rgb(244, 245, 246); font-weight: 800; font-style: normal; font-size: 16px;">E-posta</label><input id="notifyEmail" type="email" required="" autocomplete="email">
-     </div>
-     <div class="modal-actions">
-      <button id="notifySubmit" class="primary-button canva-button" data-template-id="notify-submit" type="submit" style="background: rgb(227, 38, 46); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Bildirim Talebi Oluştur</button><button class="secondary-button canva-button" data-template-id="notify-cancel" type="button" data-close-modal="notifyModal" style="background: rgb(23, 26, 30); color: rgb(255, 255, 255); font-weight: 800; font-style: normal; font-size: 16px;">Vazgeç</button>
-     </div>
-     <p id="notifyMessageStatus" class="form-message" aria-live="polite"></p>
-    </form>
-   </section>
-  </div>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <main id="app">
+      <!-- 1. Açılış: büyük logo ve ana slogan -->
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="site-width hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">ANKARA • 2026</span>
+            <h1 id="hero-title" class="hero-title">Gelecek Sahada <span>Gelişiyor.</span></h1>
+            <p class="hero-copy">Ankara’nın genç yeteneklerini adil rekabet, güçlü değerler ve ortak bir basketbol kültürü etrafında buluşturuyoruz.</p>
+            <div class="button-row">
+              <a class="primary-button" href="#vizyon-misyon">Ligi Keşfet</a>
+              <a class="secondary-button" href="#katilim">Kulüpler İçin Başvuru</a>
+            </div>
+            <div class="trust-row" aria-label="Lig özellikleri">
+              <span class="trust-item">Gelişim odaklı</span>
+              <span class="trust-item">Kaliteli hakem kadrosu</span>
+              <span class="trust-item">Ankara merkezli</span>
+            </div>
+          </div>
+          <div class="hero-mark">
+            <img class="hero-logo" src="assets/images/bgl_logo.png" alt="Başkent Tesla Gelişim Ligi logosu" width="520" height="520" fetchpriority="high">
+          </div>
+        </div>
+      </section>
 
-  <script src="app.js" defer></script>
+      <!-- 2. Vizyon ve misyon -->
+      <section class="section home-mission" id="vizyon-misyon" aria-labelledby="mission-title">
+        <div class="site-width">
+          <span class="eyebrow">HEDEFİMİZ</span>
+          <h2 class="section-title" id="mission-title">Sahadan Daha Büyük<br>Bir Hedef</h2>
+          <div class="mission-grid">
+            <article class="mission-card">
+              <span class="card-kicker">01 / GELECEĞE BAKIŞ</span>
+              <h3>Vizyonumuz</h3>
+              <p>Ankara’yı altyapı basketbolunda örnek bir model haline getirerek; nitelikli, özgüvenli ve değerlerine bağlı sporcuların yetiştiği, Türk basketboluna sürdürülebilir katkı sağlayan bir gelişim platformu olmak.</p>
+            </article>
+            <article class="mission-card">
+              <span class="card-kicker">02 / BİRLİKTE GELİŞİM</span>
+              <h3>Misyonumuz</h3>
+              <p>Çocuklarımıza ve gençlerimize güvenli, adil ve rekabetçi bir ortamda basketbol oynama fırsatı sunmak; sporcu, antrenör, hakem, kulüp ve ailelerin birlikte geliştiği bir ekosistem oluşturup Ankara basketbolunun bugününü ve yarınlarını güçlendirmek.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Kulüp katılımı -->
+      <section class="cta-band" id="katilim" aria-labelledby="participation-title">
+        <div class="site-width cta-inner">
+          <div>
+            <span class="eyebrow">KULÜPLER İÇİN</span>
+            <h2 class="cta-title" id="participation-title">Gelecekte<br>Yeriniz Olsun.</h2>
+            <p>Gelişimi skorun önüne koyan, sporcularına sürdürülebilir bir rekabet ortamı sunmak isteyen kulüpleri Başkent Tesla Gelişim Ligi’ne davet ediyoruz.</p>
+          </div>
+          <div class="participation-actions">
+            <a class="primary-button" href="#iletisim">Katılım İçin İletişime Geç</a>
+            <a class="secondary-button" href="kulupler.html">Kulüpleri İncele</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. İş birliği ve sponsorluk: henüz sponsor adı/logosu eklenmedi -->
+      <section class="section home-partners" id="sponsorluk" aria-labelledby="partners-title">
+        <div class="site-width partners-grid">
+          <div>
+            <span class="eyebrow">İŞ BİRLİĞİ & SPONSORLUK</span>
+            <h2 class="section-title" id="partners-title">Gençlerin Yanında,<br>Oyunun İçinde.</h2>
+            <p class="section-copy">Ankara basketbolunun geleceğine katkı sunmak isteyen markaları ve kurumları bizimle buluşmaya davet ediyoruz. Genç sporcuların gelişimini destekleyen iş birliklerini birlikte şekillendirelim.</p>
+            <a class="primary-button" href="mailto:baskentgelisimligi@gmail.com" data-contact="email">Sponsorluk İçin İletişime Geç</a>
+          </div>
+          <div class="partner-options">
+            <article><span class="card-kicker">01</span><div><h3>Lig Sponsorluğu</h3><p>Sezon boyunca genç sporcuların gelişim yolculuğuna eşlik edin.</p></div></article>
+            <article><span class="card-kicker">02</span><div><h3>Malzeme ve Ekipman</h3><p>Sahadaki ihtiyaçlara katkı sunarak sporculara destek olun.</p></div></article>
+            <article><span class="card-kicker">03</span><div><h3>Medya ve Yayın</h3><p>Maçların heyecanını daha fazla basketbolseverle buluşturalım.</p></div></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 5. İletişim ve sosyal medya -->
+    <footer class="bgl-footer" id="iletisim">
+      <div class="site-width footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="Başkent Tesla Gelişim Ligi ana sayfa">
+            <span class="logo-wrap"><img src="assets/images/bgl_logo.png" alt="" width="56" height="56" loading="lazy"></span>
+            <span class="brand-name">Başkent Tesla<span>Gelişim Ligi</span></span>
+          </a>
+          <p class="footer-copy">Ankara’dan Türk basketbolunun geleceğine.</p>
+        </div>
+        <div class="footer-contact">
+          <h2 class="footer-heading">İletişim</h2>
+          <ul class="footer-list">
+            <li><a class="footer-icon-link" href="mailto:baskentgelisimligi@gmail.com" data-contact="email"><img class="footer-icon" src="assets/images/email_icon.png" alt="" width="24" height="24" loading="lazy"><span data-contact-label="email">baskentgelisimligi@gmail.com</span></a></li>
+            <li><a class="footer-icon-link" href="tel:+905323351001"><img class="footer-icon" src="assets/images/phone_icon.png" alt="" width="24" height="24" loading="lazy"><span>0532 335 10 01</span></a></li>
+            <li><a class="footer-icon-link" href="https://wa.me/905323351001" data-contact="whatsapp" target="_blank" rel="noopener noreferrer"><img class="footer-icon" src="assets/images/whatsapp_icon.png" alt="" width="24" height="24" loading="lazy"><span>WhatsApp’tan Yazın</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h2 class="footer-heading">Sosyal Medya</h2>
+          <ul class="footer-list">
+            <!-- Hesap adreslerini home.js dosyasının başında doldurun. -->
+            <li><a class="footer-icon-link" data-contact="instagram" aria-disabled="true"><img class="footer-icon" src="assets/images/instagram_icon.png" alt="" width="24" height="24" loading="lazy"><span>Instagram</span></a></li>
+            <li><a class="footer-icon-link" data-contact="youtube" aria-disabled="true"><img class="footer-icon" src="assets/images/youtube_icon.png" alt="" width="24" height="24" loading="lazy"><span>YouTube</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

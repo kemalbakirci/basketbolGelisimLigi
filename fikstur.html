@@ -62,32 +62,108 @@
 
     </section>
    </main>
-   <footer>
-    <div class="site-width footer-grid">
-     <div>
-      <div class="brand" style="margin-bottom:16px"><span class="logo-wrap"><img data-template-id="footer-logo" class="canva-image" loading="lazy" src="assets/images/bgl_logo.png" alt="Başkent Tesla Gelişim Ligi logosu"></span> <span class="brand-name">Başkent Tesla<span>Gelişim Ligi</span></span>
-      </div>
-      <p class="footer-copy canva-text" data-template-id="footer-copy" style="color: rgb(190, 196, 201); font-weight: 400; font-style: normal; font-size: 16px;">Ankara’dan Türk basketbolunun geleceğine.</p>
-     </div>
-     <div>
-      <h2 class="footer-heading canva-text" data-template-id="footer-nav-title" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 24px;">Keşfet</h2>
-      <ul class="footer-list">
-       <li><a class="canva-link" data-template-id="footer-home" href="index.html" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">Ana Sayfa</a></li>
-       <li><a class="canva-link" data-template-id="footer-clubs" href="kulupler.html" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">Kulüpler</a></li>
-       <li><a class="canva-link" data-template-id="footer-fixtures" href="fikstur.html" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">Fikstür</a></li>
-      </ul>
-     </div>
-     <div>
-      <h2 class="footer-heading canva-text" data-template-id="footer-contact-title" style="color: rgb(244, 122, 32); font-weight: 800; font-style: normal; font-size: 24px;">İletişim</h2>
-      <ul class="footer-list">
-       <li data-template-id="footer-email" class="canva-text" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">[e-posta eklenecek]</li>
-       <li data-template-id="footer-phone" class="canva-text" style="color: rgb(213, 216, 218); font-weight: 400; font-style: normal; font-size: 16px;">[telefon eklenecek]</li>
-      </ul>
-      <div class="socials" aria-label="Sosyal medya bağlantıları"><span class="social-slot canva-tag" data-template-id="social-instagram" style="background: rgb(10, 12, 14); color: rgb(191, 196, 200); font-weight: 400; font-style: normal; font-size: 16px;">Instagram</span> <span class="social-slot canva-tag" data-template-id="social-youtube" style="background: rgb(10, 12, 14); color: rgb(191, 196, 200); font-weight: 400; font-style: normal; font-size: 16px;">YouTube</span> <span class="social-slot canva-tag" data-template-id="social-other" style="background: rgb(10, 12, 14); color: rgb(191, 196, 200); font-weight: 400; font-style: normal; font-size: 16px;">Diğer sosyal</span>
-      </div>
-     </div>
+<footer class="bgl-footer">
+  <div class="site-width footer-grid">
+
+    <!-- Lig kimliği -->
+    <div class="footer-brand">
+      <a class="brand" href="index.html"
+         aria-label="Başkent Tesla Gelişim Ligi ana sayfa">
+        <span class="logo-wrap">
+          <img
+            src="assets/images/bgl_logo.png"
+            alt="Başkent Tesla Gelişim Ligi logosu"
+            loading="lazy"
+          >
+        </span>
+        <span class="brand-name">
+          Başkent Tesla
+          <span>Gelişim Ligi</span>
+        </span>
+      </a>
+
+      <p class="footer-copy">
+        Ankara’dan Türk basketbolunun geleceğine.
+      </p>
     </div>
-   </footer>
+
+    <!-- İletişim -->
+    <div class="footer-contact">
+      <h2 class="footer-heading">İletişim</h2>
+
+      <ul class="footer-list">
+        <li>
+          <a class="footer-icon-link"
+             href="mailto:baskentgelisimligi@gmail.com">
+            <img
+              class="footer-icon"
+              src="assets/images/email_icon.png"
+              alt=""
+              width="24"
+              height="24"
+              loading="lazy"
+            >
+            <span>baskentgelisimligi@gmail.com</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="footer-icon-link" href="tel:+905323351001">
+            <img
+              class="footer-icon"
+              src="assets/images/phone_icon.png"
+              alt=""
+              width="24"
+              height="24"
+              loading="lazy"
+            >
+            <span>0532 335 10 01</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sosyal medya -->
+    <div class="footer-social">
+      <h2 class="footer-heading">Sosyal Medya</h2>
+
+      <ul class="footer-list">
+        <li>
+          <!-- Gerçek hesap adresi hazır olduğunda
+               bu a etiketine href="https://..." ekle. -->
+          <a class="footer-icon-link">
+            <img
+              class="footer-icon"
+              src="assets/images/instagram_icon.png"
+              alt=""
+              width="24"
+              height="24"
+              loading="lazy"
+            >
+            <span>Instagram</span>
+          </a>
+        </li>
+
+        <li>
+          <!-- Gerçek kanal adresi hazır olduğunda
+               bu a etiketine href="https://..." ekle. -->
+          <a class="footer-icon-link">
+            <img
+              class="footer-icon"
+              src="assets/images/youtube_icon.png"
+              alt=""
+              width="24"
+              height="24"
+              loading="lazy"
+            >
+            <span>YouTube</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</footer>
   </div>
   <div id="contactModal" class="modal-backdrop" role="presentation">
    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">

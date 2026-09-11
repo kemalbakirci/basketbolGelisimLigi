@@ -1,35 +1,40 @@
-/* İş Ortaklarımız — styles.css dosyasından SONRA yüklenir. */
+/* İş Ortaklarımız — styles.css dosyasından sonra yüklenir. */
 .partners-page .partners-hero { padding: 78px 0 58px; background: radial-gradient(ellipse at 90% 10%, #254536, transparent 60%), #0b1411; border-bottom: 1px solid #354b3e; }
 .partners-page .partners-hero h1 { margin: 22px 0 24px; font-size: clamp(42px,6.7vw,86px); line-height: 1.05; letter-spacing: -.035em; }
 .partners-page .partners-hero h1 span { color: var(--green); }
 .partners-intro { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
 .partners-intro p { max-width: 740px; margin: 0; color: #c7d8ce; font-size: 18px; line-height: 1.75; }
 .partners-intro > a { flex-shrink: 0; }
-.partners-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.partners-page .partners-section-heading .section-title { margin-bottom: 26px; }
-.partner-badge { display: inline-block; width: fit-content; border: 1px solid #487758; color: #abefbd; background: #183b28; border-radius: 30px; padding: 8px 14px; font-size: 14px; line-height: 1.4; }
-.partners-page .agency-section { padding-bottom: 64px; }
-.agency-banner { display: block; position: relative; border: 1px solid #46634f; border-radius: 18px; overflow: hidden; background: #183626; color: #f5faf6; }
-.agency-banner[href]:hover { border-color: var(--green); }
-.agency-banner-copy { padding: 38px 44px; background: linear-gradient(110deg,#244b32,#12291d); }
-.advert-label { display: block; font-size: 13px; font-weight: 800; line-height: 1.6; letter-spacing: .12em; color: #c9dfcf; }
-.agency-banner-copy strong { display: block; margin: 22px 0; font-size: clamp(44px,7vw,90px); letter-spacing: -.025em; line-height: 1; }
-.agency-banner-copy strong span { margin-left: 16px; font-size: .42em; font-weight: 400; color: #ffb365; letter-spacing: .1em; }
-.agency-banner-copy p { margin: 0; font-size: 16px; line-height: 1.6; }
-.agency-art { display: block; width: 100%; height: auto; }
-.agency-art[hidden], .partner-club-logo img[hidden] { display: none; }
-.partners-page .partner-clubs { background: #f0f5ef; color: #153720; }
-.partners-page .partner-clubs .eyebrow { color: #306744; }
-.partner-club-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
-.partner-club-card { min-width: 0; padding: 28px; border-radius: 14px; border: 1px solid #bfd5c4; background: #fff; min-height: 360px; }
-.partner-club-card h3 { margin: 20px 0 12px; font-size: 24px; line-height: 1.25; overflow-wrap: anywhere; }
-.partner-club-card p { margin: 0; color: #4d6555; line-height: 1.7; font-size: 16px; }
-.partner-club-logo { display: grid; place-items: center; height: 170px; margin: 20px 0 0; }
-.partner-club-logo img { width: 150px; height: 150px; object-fit: contain; }
-.soon-partner { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; background: #e5eee5; border-style: dashed; }
-.partner-question { color: #578265; font: 800 100px/1 var(--heading); }
+.partner-badge { display: inline-block; width: fit-content; border: 1px solid #487758; color: #abefbd; background: #183b28; border-radius: 30px; padding: 8px 14px; font-size: 14px; line-height: 1.4; font-weight: 700; }
+.feature-topline { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
+.feature-layout { display: grid; grid-template-columns: minmax(0,.95fr) minmax(0,1.15fr); gap: clamp(32px,5vw,76px); align-items: center; }
+.feature-layout > * { min-width: 0; }
+.feature-logo-panel { display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 28px; border: 1px solid #d0dfd1; border-radius: 20px; background: #f2f6ef; color: #25412d; }
+.feature-logo-panel img { display: block; width: min(100%,360px); height: auto; aspect-ratio: 1; object-fit: contain; margin: 24px 0; }
+.logo-caption { font-size: 13px; line-height: 1.5; letter-spacing: .1em; text-align: center; font-weight: 800; }
+.logo-wordmark { font-family: var(--heading); font-size: 20px; font-weight: 800; letter-spacing: .12em; text-align: center; line-height: 1.4; }
+.feature-index { display: block; color: #9ec1ab; font-size: 13px; line-height: 1.6; letter-spacing: .08em; font-weight: 700; }
+.partners-page .feature-copy h2 { font-size: clamp(32px,4vw,52px); line-height: 1.12; margin: 20px 0 26px; letter-spacing: -.02em; }
+.feature-copy h2 span { display: block; color: var(--green); }
+.feature-copy p { color: #c7d8ce; font-size: 17px; line-height: 1.8; margin-bottom: 18px; }
+.feature-copy .feature-lead { color: #ffb365; font-size: 21px; font-weight: 700; line-height: 1.5; }
+.feature-note { display: grid; gap: 8px; padding: 20px 0 0 18px; margin-top: 28px; border-top: 1px solid #3b5745; border-left: 3px solid var(--green); }
+.feature-note span { font-size: 13px; line-height: 1.5; color: #aac6b5; letter-spacing: .07em; }
+.feature-note strong { font-size: 17px; line-height: 1.5; }
+.partners-page .sponsor-feature { background: #f0f5ef; color: #153720; }
+.sponsor-feature .eyebrow { color: #306744; }
+.sponsor-feature .partner-badge { background: #183e29; color: #cbf7d7; }
+.sponsor-layout { grid-template-columns: minmax(0,1.15fr) minmax(0,.95fr); }
+.sponsor-logo-panel { background: #fff; border-color: #c5d8c8; box-shadow: 0 16px 40px #1537200a; }
+.sponsor-logo-panel .logo-caption { color: #875018; }
+.sponsor-feature .feature-copy h2 span { color: #277447; }
+.sponsor-feature .feature-copy p { color: #405d49; }
+.sponsor-feature .feature-copy .feature-lead { color: #81501d; }
+.sponsor-feature .feature-index, .sponsor-feature .feature-note span { color: #496b54; }
+.sponsor-feature .feature-note { border-top-color: #bfd2c2; border-left-color: #bc722b; }
 .partners-page .partnership-invite { background: #101d16; }
 .advert-invite { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); align-items: center; gap: 48px; }
+.advert-label { display: block; font-size: 13px; font-weight: 800; line-height: 1.6; letter-spacing: .12em; color: #c9dfcf; }
 .available-banner { display: flex; flex-direction: column; justify-content: center; gap: 24px; min-height: 290px; padding: 34px; border: 2px dashed #75b88b; border-radius: 14px; background: #193c28; transition: background .2s; }
 .available-banner:hover { background: #245034; }
 .available-banner strong { font: 800 clamp(28px,3.5vw,42px)/1.15 var(--heading); color: #acffc4; }
@@ -37,17 +42,18 @@
 @media(max-width: 960px) {
   .partners-intro { align-items: flex-start; flex-direction: column; }
   .advert-invite { grid-template-columns: minmax(0,1fr); gap: 32px; }
-  .partner-club-grid { gap: 16px; }
-  .partner-club-card { padding: 20px; }
+  .feature-layout { gap: 32px; }
 }
-@media(max-width: 700px) {
-  .partner-club-grid { grid-template-columns: minmax(0,1fr); }
-  .soon-partner { min-height: 260px; }
-  .partners-section-heading { display: block; margin-bottom: 24px; }
-  .agency-banner-copy { padding: 30px 24px; }
-  .agency-banner-copy strong span { display: block; margin: 14px 0 0; }
-  .available-banner { padding: 28px; }
+@media(max-width: 760px) {
+  .feature-layout, .sponsor-layout { grid-template-columns: minmax(0,1fr); }
+  .feature-logo-panel { width: 100%; max-width: 480px; justify-self: center; }
+  .sponsor-logo-panel { grid-row: 1; }
+  .feature-topline { align-items: flex-start; flex-direction: column; gap: 16px; }
+  .feature-logo-panel img { width: min(100%,280px); }
+}
+@media(max-width: 560px) {
   .partners-page .partners-hero { padding: 54px 0 42px; }
+  .feature-logo-panel { padding: 22px; }
+  .available-banner { padding: 28px; }
 }
 @media(prefers-reduced-motion: reduce) { .available-banner { transition: none; } }
-

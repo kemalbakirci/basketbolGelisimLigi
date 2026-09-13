@@ -1,59 +1,456 @@
-/* İş Ortaklarımız — styles.css dosyasından sonra yüklenir. */
-.partners-page .partners-hero { padding: 78px 0 58px; background: radial-gradient(ellipse at 90% 10%, #254536, transparent 60%), #0b1411; border-bottom: 1px solid #354b3e; }
-.partners-page .partners-hero h1 { margin: 22px 0 24px; font-size: clamp(42px,6.7vw,86px); line-height: 1.05; letter-spacing: -.035em; }
-.partners-page .partners-hero h1 span { color: var(--green); }
-.partners-intro { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.partners-intro p { max-width: 740px; margin: 0; color: #c7d8ce; font-size: 18px; line-height: 1.75; }
-.partners-intro > a { flex-shrink: 0; }
-.partner-badge { display: inline-block; width: fit-content; border: 1px solid #487758; color: #abefbd; background: #183b28; border-radius: 30px; padding: 8px 14px; font-size: 14px; line-height: 1.4; font-weight: 700; }
-.feature-topline { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 32px; }
-.feature-layout { display: grid; grid-template-columns: minmax(0,.95fr) minmax(0,1.15fr); gap: clamp(32px,5vw,76px); align-items: center; }
-.feature-layout > * { min-width: 0; }
-.feature-logo-panel { display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 28px; border: 1px solid #d0dfd1; border-radius: 20px; background: #f2f6ef; color: #25412d; }
-.feature-logo-panel img { display: block; width: min(100%,360px); height: auto; aspect-ratio: 1; object-fit: contain; margin: 24px 0; }
-.logo-caption { font-size: 13px; line-height: 1.5; letter-spacing: .1em; text-align: center; font-weight: 800; }
-.logo-wordmark { font-family: var(--heading); font-size: 20px; font-weight: 800; letter-spacing: .12em; text-align: center; line-height: 1.4; }
-.feature-index { display: block; color: #9ec1ab; font-size: 13px; line-height: 1.6; letter-spacing: .08em; font-weight: 700; }
-.partners-page .feature-copy h2 { font-size: clamp(32px,4vw,52px); line-height: 1.12; margin: 20px 0 26px; letter-spacing: -.02em; }
-.feature-copy h2 span { display: block; color: var(--green); }
-.feature-copy p { color: #c7d8ce; font-size: 17px; line-height: 1.8; margin-bottom: 18px; }
-.feature-copy .feature-lead { color: #ffb365; font-size: 21px; font-weight: 700; line-height: 1.5; }
-.feature-note { display: grid; gap: 8px; padding: 20px 0 0 18px; margin-top: 28px; border-top: 1px solid #3b5745; border-left: 3px solid var(--green); }
-.feature-note span { font-size: 13px; line-height: 1.5; color: #aac6b5; letter-spacing: .07em; }
-.feature-note strong { font-size: 17px; line-height: 1.5; }
-.partners-page .sponsor-feature { background: #f0f5ef; color: #153720; }
-.sponsor-feature .eyebrow { color: #306744; }
-.sponsor-feature .partner-badge { background: #183e29; color: #cbf7d7; }
-.sponsor-layout { grid-template-columns: minmax(0,1.15fr) minmax(0,.95fr); }
-.sponsor-logo-panel { background: #fff; border-color: #c5d8c8; box-shadow: 0 16px 40px #1537200a; }
-.sponsor-logo-panel .logo-caption { color: #875018; }
-.sponsor-feature .feature-copy h2 span { color: #277447; }
-.sponsor-feature .feature-copy p { color: #405d49; }
-.sponsor-feature .feature-copy .feature-lead { color: #81501d; }
-.sponsor-feature .feature-index, .sponsor-feature .feature-note span { color: #496b54; }
-.sponsor-feature .feature-note { border-top-color: #bfd2c2; border-left-color: #bc722b; }
-.partners-page .partnership-invite { background: #101d16; }
-.advert-invite { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); align-items: center; gap: 48px; }
-.advert-label { display: block; font-size: 13px; font-weight: 800; line-height: 1.6; letter-spacing: .12em; color: #c9dfcf; }
-.available-banner { display: flex; flex-direction: column; justify-content: center; gap: 24px; min-height: 290px; padding: 34px; border: 2px dashed #75b88b; border-radius: 14px; background: #193c28; transition: background .2s; }
-.available-banner:hover { background: #245034; }
-.available-banner strong { font: 800 clamp(28px,3.5vw,42px)/1.15 var(--heading); color: #acffc4; }
-.available-banner > span:last-child { font-size: 16px; line-height: 1.6; color: #e0eee3; }
-@media(max-width: 960px) {
-  .partners-intro { align-items: flex-start; flex-direction: column; }
-  .advert-invite { grid-template-columns: minmax(0,1fr); gap: 32px; }
-  .feature-layout { gap: 32px; }
+/* İş Ortaklarımız sayfası */
+
+.partners-page .partners-hero {
+  padding: 78px 0 58px;
+  border-bottom: 1px solid #354b3e;
+  background:
+    radial-gradient(ellipse at 90% 10%, #254536, transparent 60%),
+    #0b1411;
 }
-@media(max-width: 760px) {
-  .feature-layout, .sponsor-layout { grid-template-columns: minmax(0,1fr); }
-  .feature-logo-panel { width: 100%; max-width: 480px; justify-self: center; }
-  .sponsor-logo-panel { grid-row: 1; }
-  .feature-topline { align-items: flex-start; flex-direction: column; gap: 16px; }
-  .feature-logo-panel img { width: min(100%,280px); }
+
+.partners-page .partners-hero h1 {
+  margin: 22px 0 24px;
+  font-size: clamp(42px, 6.7vw, 86px);
+  line-height: 1.05;
+  letter-spacing: -.035em;
 }
-@media(max-width: 560px) {
-  .partners-page .partners-hero { padding: 54px 0 42px; }
-  .feature-logo-panel { padding: 22px; }
-  .available-banner { padding: 28px; }
+
+.partners-page .partners-hero h1 span {
+  color: var(--green);
 }
-@media(prefers-reduced-motion: reduce) { .available-banner { transition: none; } }
+
+.partners-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.partners-intro p {
+  max-width: 740px;
+  margin: 0;
+  color: #c7d8ce;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.partner-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 8px 14px;
+  border: 1px solid #487758;
+  border-radius: 30px;
+  background: #183b28;
+  color: #abefbd;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.feature-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.feature-layout,
+.swish-layout {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(32px, 5vw, 76px);
+}
+
+.sponsor-layout {
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .95fr);
+}
+
+/* Transparan logo alanları */
+
+.feature-logo-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  padding: 18px;
+  color: #eaf5ed;
+  text-align: center;
+}
+
+.feature-logo-panel img {
+  width: min(100%, 360px);
+  height: auto;
+  aspect-ratio: 1;
+  margin: 24px 0;
+  object-fit: contain;
+}
+
+.logo-caption,
+.logo-wordmark {
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.logo-caption {
+  color: #b8d8c0;
+  font-size: 13px;
+}
+
+.logo-wordmark {
+  font-family: var(--heading);
+  font-size: 20px;
+}
+
+.feature-index {
+  display: block;
+  color: #9ec1ab;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.partners-page .feature-copy h2 {
+  margin: 20px 0 26px;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.12;
+  letter-spacing: -.02em;
+}
+
+.feature-copy h2 span {
+  display: block;
+  color: var(--green);
+}
+
+.feature-copy p {
+  margin-bottom: 18px;
+  color: #c7d8ce;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.feature-copy .feature-lead {
+  color: #ffb365;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.feature-note {
+  display: grid;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 20px 0 0 18px;
+  border-top: 1px solid #3b5745;
+  border-left: 3px solid var(--green);
+}
+
+.feature-note span {
+  color: #aac6b5;
+  font-size: 13px;
+  letter-spacing: .07em;
+}
+
+.feature-note strong {
+  font-size: 17px;
+}
+
+/* Logonun altındaki bağlantılar */
+
+.partner-logo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 18px;
+}
+
+.partner-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 10px 14px;
+  border: 1px solid #477d59;
+  border-radius: 8px;
+  background: #183b28;
+  color: #dffbe6;
+  font-size: 13px;
+  font-weight: 800;
+  transition: transform .2s ease, background .2s ease, color .2s ease;
+}
+
+.partner-logo-link svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.partner-logo-link:hover {
+  background: var(--green);
+  color: #082616;
+  transform: translateY(-3px);
+}
+
+/* Başkent Tesla sponsor alanı */
+
+.partners-page .sponsor-feature {
+  background: #f0f5ef;
+  color: #153720;
+}
+
+.sponsor-feature .eyebrow,
+.sponsor-feature .feature-copy h2 span {
+  color: #277447;
+}
+
+.sponsor-feature .partner-badge {
+  background: #183e29;
+  color: #cbf7d7;
+}
+
+.sponsor-feature .feature-copy p {
+  color: #405d49;
+}
+
+.sponsor-feature .feature-copy .feature-lead {
+  color: #81501d;
+}
+
+.sponsor-feature .feature-index,
+.sponsor-feature .feature-note span {
+  color: #496b54;
+}
+
+.sponsor-feature .feature-note {
+  border-top-color: #bfd2c2;
+  border-left-color: #bc722b;
+}
+
+.sponsor-logo-panel {
+  color: #153720;
+}
+
+.sponsor-logo-panel .logo-caption {
+  color: #875018;
+}
+
+.sponsor-logo-panel .partner-logo-link {
+  border-color: #5a9570;
+  background: #e1f0e4;
+  color: #1e5b35;
+}
+
+.sponsor-logo-panel .partner-logo-link:hover {
+  background: #277447;
+  color: #fff;
+}
+
+/* Swish veri altyapısı alanı */
+
+.swish-feature {
+  overflow: hidden;
+  border-top: 1px solid #242b39;
+  border-bottom: 1px solid #242b39;
+  background:
+    radial-gradient(circle at 12% 50%, rgba(255, 50, 105, .12), transparent 30%),
+    radial-gradient(circle at 85% 30%, rgba(255, 141, 35, .1), transparent 28%),
+    #090b10;
+}
+
+.swish-feature .partner-badge {
+  border-color: rgba(255, 111, 150, .45);
+  background: rgba(255, 49, 108, .12);
+  color: #ffd4e1;
+}
+
+.swish-logo-stage {
+  position: relative;
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 34px;
+  border: 1px solid #303545;
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(255, 63, 112, .18), transparent 32%),
+    radial-gradient(circle at 80% 15%, rgba(255, 136, 38, .14), transparent 28%),
+    #07080a;
+  color: #fff;
+  text-align: center;
+}
+
+.swish-logo-stage::before {
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 14px;
+  content: "";
+  pointer-events: none;
+}
+
+.swish-logo-stage .logo-caption,
+.swish-logo-stage .logo-wordmark,
+.swish-logo-stage .partner-logo-actions {
+  position: relative;
+  z-index: 1;
+}
+
+.swish-logo-stage .logo-caption {
+  color: #ffb6ca;
+}
+
+.swish-logo-frame {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 100%;
+  min-height: 150px;
+  margin: 20px 0;
+  place-items: center;
+}
+
+.swish-logo-frame img {
+  width: min(100%, 560px);
+  height: auto;
+  object-fit: contain;
+}
+
+.swish-logo-stage .logo-wordmark {
+  color: #fff;
+}
+
+.swish-logo-stage .partner-logo-link {
+  border-color: rgba(255, 171, 190, .42);
+  background: rgba(255, 255, 255, .08);
+  color: #fff;
+}
+
+.swish-logo-stage .partner-logo-link:hover {
+  border-color: transparent;
+  background: linear-gradient(90deg, #fa306d, #ff762c);
+  color: #fff;
+}
+
+.swish-copy h2 span {
+  color: #ff5c8c;
+}
+
+.swish-copy .feature-index {
+  color: #ffb2c8;
+}
+
+.swish-copy .feature-lead {
+  color: #ffaf73;
+}
+
+.swish-copy .feature-note {
+  border-top-color: #483947;
+  border-left-color: #fb4d7b;
+}
+
+/* İş ortaklığı çağrısı */
+
+.partners-page .partnership-invite {
+  background: #101d16;
+}
+
+.advert-invite {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.advert-label {
+  color: #c9dfcf;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.available-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  min-height: 290px;
+  padding: 34px;
+  border: 2px dashed #75b88b;
+  border-radius: 14px;
+  background: #193c28;
+  transition: background .2s ease;
+}
+
+.available-banner:hover {
+  background: #245034;
+}
+
+.available-banner strong {
+  color: #acffc4;
+  font: 800 clamp(28px, 3.5vw, 42px) / 1.15 var(--heading);
+}
+
+.available-banner > span:last-child {
+  color: #e0eee3;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .partners-intro,
+  .feature-topline {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .feature-layout,
+  .sponsor-layout,
+  .swish-layout,
+  .advert-invite {
+    grid-template-columns: 1fr;
+  }
+
+  .sponsor-logo-panel {
+    grid-row: 1;
+  }
+
+  .feature-logo-panel {
+    min-height: 330px;
+  }
+}
+
+@media (max-width: 560px) {
+  .partners-page .partners-hero {
+    padding: 54px 0 42px;
+  }
+
+  .swish-logo-stage {
+    min-height: 320px;
+    padding: 24px;
+  }
+
+  .partner-logo-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .partner-logo-link {
+    width: 100%;
+  }
+
+  .available-banner {
+    padding: 28px;
+  }
+}

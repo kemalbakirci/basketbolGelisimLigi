@@ -8,7 +8,7 @@ const HOME_CONTACT = {
   email: "baskentgelisimligi@gmail.com",
   whatsapp: "https://wa.me/905323351001",
   instagram: "https://www.instagram.com/baskentgelisimligi/",
-  youtube: ""
+  youtube: "https://www.youtube.com/@Ba%C5%9FkentGeli%C5%9FimLigi"
 };
 
 document.querySelectorAll("[data-contact]").forEach(link => {

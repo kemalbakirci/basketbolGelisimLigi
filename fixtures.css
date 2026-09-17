@@ -1,38 +1,381 @@
-/* Fikstür teması: styles.css dosyasından sonra yüklenir. */
-.fixtures-page .inner-hero { padding: 78px 0 52px; background: radial-gradient(ellipse at 85% 20%,#254536,transparent 60%),#0b1411; border-color: #354b3e; }
-.fixtures-page .inner-hero .section-title { max-width: 1050px; margin: 22px 0 24px; font-size: clamp(40px,6.2vw,78px); line-height: 1.08; }
-.fixtures-page .inner-hero h1 span { color: var(--green); }
-.fixtures-page .inner-hero .section-copy { margin: 0; max-width: 780px; font-size: 18px; }
-.fixtures-page .fixture-stage { min-height: 290px; background: linear-gradient(125deg,#1d442c,#12271b); border-color: #486b52; border-radius: 16px; }
-.fixtures-page .fixture-stage::before { border-color: #a1d0af40; }
-.fixtures-page .fixture-stage::after { background: #a1d0af40; }
-.fixtures-page .ball { background: #ffa24c; }
-.fixtures-page .filter-panel { margin-top: 24px; padding: 28px; background: #f0f5ef; border: 1px solid #bfd5c4; border-radius: 14px; }
-.fixtures-page .filter-grid { grid-template-columns: repeat(5,minmax(0,1fr)); gap: 16px; }
-.fixtures-page .filter-field { min-width: 0; }
-.fixtures-page .filter-field label { color: #203d2a; font-size: 14px; line-height: 1.5; }
-.fixtures-page .filter-field select { min-height: 48px; border-radius: 8px; background: #e2eae1; border: 1px solid #acbeaf; color: #4d6555; font-size: 16px; opacity: 1; cursor: not-allowed; }
-.fixtures-page .soon-tag { color: #47604e; font-size: 13px; }
-.fixtures-page .clubs-cta { margin-top: 40px; padding: 44px; background: #183e29; border: 1px solid #486b52; border-radius: 16px; }
-.fixtures-page .clubs-cta .section-title { margin: 0 auto 20px; font-size: clamp(30px,4vw,46px); line-height: 1.15; }
-.fixtures-page .clubs-cta .section-copy { color: #d2e5d8; }
-.fixtures-page .fixture-actions { justify-content: center; }
-.fixtures-page #notifyDialog { width: min(520px,calc(100% - 32px)); max-height: calc(100dvh - 40px); padding: 28px; background: #12271b; color: #f5f8f6; border: 1px solid #557c60; border-radius: 16px; overflow: auto; }
-.fixtures-page #notifyDialog::backdrop { background: #040b08bd; }
-.fixtures-page #notifyTitle { font-size: 28px; line-height: 1.2; margin-bottom: 20px; }
-.fixtures-page .close-button { flex: 0 0 42px; width: 42px; height: 42px; border-radius: 8px; }
-.fixtures-page .form-group input { background: #09180e; border-color: #5c7a63; border-radius: 8px; font-size: 16px; }
-.fixtures-page .form-message { color: #afedc2; line-height: 1.6; }
-body.fixture-dialog-open { overflow: hidden; }
-@media(max-width: 860px) {
-  .fixtures-page .filter-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+/* Fikstür sayfası */
+
+.fixtures-page .inner-hero {
+  padding: 78px 0 52px;
+  background: radial-gradient(ellipse at 85% 20%, #254536, transparent 60%), #0b1411;
+  border-color: #354b3e;
 }
-@media(max-width: 560px) {
-  .fixtures-page .inner-hero { padding: 54px 0 40px; }
-  .fixtures-page .filter-grid { grid-template-columns: minmax(0,1fr); }
-  .fixtures-page .filter-panel, .fixtures-page .clubs-cta { padding: 24px; }
-  .fixtures-page .fixture-stage { min-height: 250px; }
+
+.fixtures-page .inner-hero .section-title {
+  max-width: 1050px;
+  margin: 22px 0 24px;
+  font-size: clamp(40px, 6.2vw, 78px);
+  line-height: 1.08;
 }
-@media(prefers-reduced-motion: reduce) {
-  .fixtures-page .ball { animation: none; transform: none; }
+
+.fixtures-page .inner-hero h1 span {
+  color: var(--green);
+}
+
+.fixtures-page .inner-hero .section-copy {
+  max-width: 780px;
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Fikstür gelene kadar animasyonlu saha */
+
+.fixtures-page .fixture-teaser {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: 430px;
+  overflow: hidden;
+  place-items: center;
+  border: 1px solid #486b52;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(72, 220, 135, .13), transparent 38%),
+    linear-gradient(135deg, #1b442c, #0d2116 70%);
+}
+
+.fixtures-page .fixture-teaser::before,
+.fixtures-page .fixture-teaser::after {
+  display: none;
+}
+
+.court-lines {
+  position: absolute;
+  inset: 34px;
+  z-index: -1;
+  border: 2px solid rgba(189, 238, 204, .23);
+  border-radius: 5px;
+}
+
+.court-midline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(189, 238, 204, .23);
+  transform: translateX(-50%);
+}
+
+.court-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(31vw, 190px);
+  aspect-ratio: 1;
+  border: 2px solid rgba(189, 238, 204, .23);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.court-key {
+  position: absolute;
+  top: 50%;
+  width: min(15vw, 118px);
+  height: 48%;
+  border: 2px solid rgba(189, 238, 204, .23);
+  transform: translateY(-50%);
+}
+
+.court-key-left {
+  left: 0;
+  border-left: 0;
+}
+
+.court-key-right {
+  right: 0;
+  border-right: 0;
+}
+
+.fixture-scoreboard {
+  z-index: 2;
+  display: grid;
+  gap: 14px;
+  max-width: 440px;
+  padding: 28px 34px;
+  text-align: center;
+  border: 1px solid rgba(168, 239, 189, .35);
+  border-radius: 12px;
+  background: rgba(9, 24, 15, .78);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .25);
+  backdrop-filter: blur(8px);
+}
+
+.scoreboard-label {
+  color: #b6d9c0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.fixture-scoreboard strong {
+  color: #f6fbf7;
+  font-family: var(--heading);
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1;
+  letter-spacing: .04em;
+}
+
+.scoreboard-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  color: #9ceeb6;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.scoreboard-status i {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 0 rgba(72, 220, 135, .65);
+  animation: status-pulse 1.8s infinite;
+}
+
+.basketball-animation {
+  position: absolute;
+  right: clamp(28px, 7vw, 100px);
+  bottom: 48px;
+  width: 90px;
+  height: 130px;
+  animation: ball-bounce 2.6s ease-in-out infinite;
+}
+
+.fixture-ball {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 82px;
+  aspect-ratio: 1;
+  border: 3px solid #3d240d;
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 48%, #3d240d 49%, #3d240d 52%, transparent 53%),
+    linear-gradient(transparent 48%, #3d240d 49%, #3d240d 52%, transparent 53%),
+    radial-gradient(circle at 28% 23%, #ffc37e 0 7%, transparent 8%),
+    #f58228;
+  box-shadow: inset -12px -10px 0 rgba(122, 55, 9, .25), 0 12px 18px rgba(0, 0, 0, .28);
+  animation: ball-spin 2.6s linear infinite;
+}
+
+.ball-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 9px;
+  width: 75px;
+  height: 13px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, .4);
+  filter: blur(3px);
+  animation: shadow-scale 2.6s ease-in-out infinite;
+}
+
+.court-corner {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-color: rgba(255, 162, 76, .25);
+  border-style: solid;
+}
+
+.corner-one {
+  top: 0;
+  left: 0;
+  border-width: 2px 0 0 2px;
+}
+
+.corner-two {
+  right: 0;
+  bottom: 0;
+  border-width: 0 2px 2px 0;
+}
+
+.fixtures-page .filter-panel {
+  margin-top: 24px;
+  padding: 28px;
+  border: 1px solid #bfd5c4;
+  border-radius: 14px;
+  background: #f0f5ef;
+}
+
+.fixtures-page .filter-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.fixtures-page .filter-field {
+  min-width: 0;
+}
+
+.fixtures-page .filter-field label {
+  color: #203d2a;
+  font-size: 14px;
+}
+
+.fixtures-page .filter-field select {
+  min-height: 48px;
+  border: 1px solid #acbeaf;
+  border-radius: 8px;
+  background: #e2eae1;
+  color: #4d6555;
+  font-size: 16px;
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.fixtures-page .soon-tag {
+  color: #47604e;
+  font-size: 13px;
+}
+
+.fixtures-page .clubs-cta {
+  margin-top: 40px;
+  padding: 44px;
+  border: 1px solid #486b52;
+  border-radius: 16px;
+  background: #183e29;
+}
+
+.fixtures-page .clubs-cta .section-title {
+  margin: 0 auto 20px;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.15;
+}
+
+.fixtures-page .clubs-cta .section-copy {
+  color: #d2e5d8;
+}
+
+.fixtures-page .fixture-actions {
+  justify-content: center;
+}
+
+.fixtures-page #notifyDialog {
+  width: min(520px, calc(100% - 32px));
+  max-height: calc(100dvh - 40px);
+  padding: 28px;
+  overflow: auto;
+  border: 1px solid #557c60;
+  border-radius: 16px;
+  background: #12271b;
+  color: #f5f8f6;
+}
+
+.fixtures-page #notifyDialog::backdrop {
+  background: rgba(4, 11, 8, .74);
+}
+
+.fixtures-page #notifyTitle {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.fixtures-page .close-button {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 8px;
+}
+
+.fixtures-page .form-group input {
+  border-color: #5c7a63;
+  border-radius: 8px;
+  background: #09180e;
+  font-size: 16px;
+}
+
+.fixtures-page .form-message {
+  color: #afedc2;
+  line-height: 1.6;
+}
+
+body.fixture-dialog-open {
+  overflow: hidden;
+}
+
+@keyframes ball-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-105px); }
+}
+
+@keyframes ball-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes shadow-scale {
+  0%, 100% { transform: scale(1); opacity: .7; }
+  50% { transform: scale(.48); opacity: .25; }
+}
+
+@keyframes status-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(72, 220, 135, .7); }
+  70% { box-shadow: 0 0 0 9px rgba(72, 220, 135, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(72, 220, 135, 0); }
+}
+
+@media (max-width: 860px) {
+  .fixtures-page .filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .basketball-animation {
+    right: 34px;
+  }
+}
+
+@media (max-width: 560px) {
+  .fixtures-page .inner-hero {
+    padding: 54px 0 40px;
+  }
+
+  .fixtures-page .fixture-teaser {
+    min-height: 360px;
+  }
+
+  .court-lines {
+    inset: 18px;
+  }
+
+  .court-key {
+    width: 75px;
+  }
+
+  .fixture-scoreboard {
+    max-width: calc(100% - 42px);
+    padding: 24px 16px;
+  }
+
+  .basketball-animation {
+    right: 20px;
+    bottom: 28px;
+    transform: scale(.75);
+    transform-origin: bottom right;
+  }
+
+  .fixtures-page .filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fixtures-page .filter-panel,
+  .fixtures-page .clubs-cta {
+    padding: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scoreboard-status i,
+  .basketball-animation,
+  .fixture-ball,
+  .ball-shadow {
+    animation: none;
+  }
 }

@@ -52,9 +52,7 @@ button {
 }
 
 button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible {
+a:focus-visible {
   outline: 3px solid var(--orange);
   outline-offset: 4px;
 }
@@ -84,14 +82,12 @@ textarea:focus-visible {
   top: 16px;
 }
 
-/* Header */
-
 .topbar {
   position: sticky;
   top: 0;
   z-index: 50;
   border-bottom: 1px solid #293a31;
-  background: rgba(10, 20, 15, .96);
+  background: rgba(10, 20, 15, 0.96);
   backdrop-filter: blur(14px);
 }
 
@@ -131,7 +127,7 @@ textarea:focus-visible {
   font-family: var(--heading);
   font-size: 19px;
   line-height: 1.1;
-  letter-spacing: .035em;
+  letter-spacing: 0.035em;
   text-transform: uppercase;
 }
 
@@ -140,7 +136,7 @@ textarea:focus-visible {
   margin-top: 4px;
   color: var(--orange);
   font-size: 12px;
-  letter-spacing: .14em;
+  letter-spacing: 0.14em;
 }
 
 .nav-links {
@@ -155,7 +151,7 @@ textarea:focus-visible {
   color: #d7dade;
   font-size: 16px;
   font-weight: 700;
-  transition: color .2s ease, border-color .2s ease;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 .nav-link:hover,
@@ -183,7 +179,7 @@ textarea:focus-visible {
   font-weight: 800;
   line-height: 1.4;
   text-align: center;
-  transition: transform .2s ease, background .2s ease, border-color .2s ease;
+  transition: transform 0.2s, background 0.2s, border-color 0.2s;
 }
 
 .join-button,
@@ -221,8 +217,6 @@ textarea:focus-visible {
   font-size: 21px;
 }
 
-/* Ortak içerik */
-
 .section {
   position: relative;
   padding: 86px 0;
@@ -235,7 +229,7 @@ textarea:focus-visible {
   color: var(--orange);
   font-size: 14px;
   font-weight: 800;
-  letter-spacing: .12em;
+  letter-spacing: 0.12em;
   line-height: 1.5;
   text-transform: uppercase;
 }
@@ -267,7 +261,7 @@ h3 {
   margin: 18px 0 32px;
   font-size: clamp(32px, 4vw, 52px);
   line-height: 1.08;
-  letter-spacing: -.015em;
+  letter-spacing: -0.015em;
 }
 
 .section-copy {
@@ -277,386 +271,12 @@ h3 {
   line-height: 1.75;
 }
 
-/* Ana sayfa */
-
-.home-page {
-  background: var(--ink);
-}
-
-.hero {
-  position: relative;
-  display: flex;
-  min-height: min(820px, calc(100svh - 90px));
-  align-items: center;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse at 82% 40%, #254536 0, transparent 52%),
-    #0b1411;
-}
-
-.hero::before {
-  position: absolute;
-  inset: 0;
-  opacity: .25;
-  background:
-    repeating-linear-gradient(
-      135deg,
-      transparent 0 38px,
-      #729581 39px,
-      transparent 40px
-    );
-  content: "";
-  pointer-events: none;
-}
-
-.hero-grid {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
-  align-items: center;
-  gap: 38px;
-  padding: 72px 0;
-}
-
-.hero-title {
-  margin: 20px 0 24px;
-  font-size: clamp(44px, 5.3vw, 76px);
-  line-height: 1.02;
-  letter-spacing: -.025em;
-}
-
-.hero-title span {
-  display: block;
-  color: var(--green);
-}
-
-.hero-copy {
-  max-width: 560px;
-  color: #c7d8ce;
-  font-size: 18px;
-  line-height: 1.75;
-}
-
-.button-row,
-.trust-row {
+.button-row {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-}
-
-.button-row {
   margin-top: 30px;
 }
-
-.trust-row {
-  margin-top: 30px;
-}
-
-.trust-item {
-  padding: 8px 10px;
-  border: 1px solid #3b5847;
-  border-radius: 6px;
-  background: rgba(18, 36, 27, .7);
-  color: #d5e7dc;
-  font-size: 14px;
-}
-
-.hero-mark {
-  position: relative;
-  display: grid;
-  width: min(100%, 540px);
-  aspect-ratio: 1;
-  justify-self: center;
-  place-items: center;
-}
-
-.hero-mark::before,
-.hero-mark::after {
-  position: absolute;
-  border-radius: 50%;
-  content: "";
-}
-
-.hero-mark::before {
-  inset: 0;
-  border: 1px solid rgba(142, 198, 163, .3);
-}
-
-.hero-mark::after {
-  inset: 7%;
-  border: 1px dashed rgba(255, 162, 76, .5);
-  animation: home-orbit 90s linear infinite;
-}
-
-.hero-logo {
-  position: relative;
-  z-index: 1;
-  width: 92%;
-  height: auto;
-  aspect-ratio: 1;
-  object-fit: contain;
-  animation: home-float 6s ease-in-out infinite;
-}
-
-@keyframes home-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-9px);
-  }
-}
-
-@keyframes home-orbit {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.home-mission {
-  background: #f0f5ef;
-  color: #122b1d;
-}
-
-.home-mission .eyebrow {
-  color: #306744;
-}
-
-.mission-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-}
-
-.mission-card {
-  padding: 34px;
-  border: 1px solid #bfd5c4;
-  border-top: 4px solid #26945a;
-  border-radius: 14px;
-  background: #fff;
-}
-
-.mission-card:nth-child(2) {
-  border-top-color: #bd6413;
-  background: #e4efe5;
-}
-
-.card-kicker {
-  display: block;
-  color: #476351;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: .08em;
-}
-
-.mission-card h3 {
-  margin: 24px 0 16px;
-  color: #173c26;
-  font-size: 30px;
-}
-
-.mission-card p {
-  margin-bottom: 0;
-  color: #344c3d;
-  font-size: 17px;
-  line-height: 1.8;
-}
-
-/* Ana sayfa Tema alanı */
-
-.home-referee-partner {
-  overflow: hidden;
-  border-top: 1px solid rgba(126, 207, 150, .2);
-  border-bottom: 1px solid rgba(126, 207, 150, .2);
-  background:
-    radial-gradient(circle at 88% 45%, rgba(72, 220, 135, .13), transparent 28%),
-    linear-gradient(135deg, #0c1711, #111d15);
-}
-
-.referee-partner-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr);
-  align-items: center;
-  gap: clamp(42px, 7vw, 100px);
-}
-
-.referee-heading-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 26px;
-}
-
-.partner-pill {
-  display: inline-flex;
-  padding: 8px 14px;
-  border: 1px solid rgba(126, 229, 157, .45);
-  border-radius: 999px;
-  background: rgba(72, 220, 135, .11);
-  color: #aef5c4;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .08em;
-}
-
-.partner-index {
-  display: block;
-  margin-bottom: 14px;
-  color: #9ec9aa;
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: .08em;
-}
-
-.home-referee-partner .section-title span {
-  display: block;
-  color: var(--green);
-}
-
-.referee-lead {
-  margin-bottom: 18px;
-  color: #ffb66b;
-  font-size: clamp(20px, 2.2vw, 25px);
-  font-weight: 800;
-  line-height: 1.4;
-}
-
-.referee-logo-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 420px;
-  text-align: center;
-}
-
-.logo-area-label {
-  color: #b8d8c0;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .12em;
-}
-
-.referee-logo-halo {
-  position: relative;
-  display: grid;
-  width: min(100%, 390px);
-  aspect-ratio: 1;
-  margin: 22px 0;
-  place-items: center;
-}
-
-.referee-logo-halo::before,
-.referee-logo-halo::after {
-  position: absolute;
-  border-radius: 50%;
-  content: "";
-}
-
-.referee-logo-halo::before {
-  inset: 0;
-  border: 1px solid rgba(111, 227, 146, .3);
-}
-
-.referee-logo-halo::after {
-  inset: 13%;
-  border: 1px solid rgba(255, 180, 94, .23);
-}
-
-.referee-logo-halo img {
-  position: relative;
-  z-index: 1;
-  width: min(74%, 300px);
-  height: auto;
-  object-fit: contain;
-}
-
-.logo-area-name {
-  color: #f0f8f1;
-  font-family: var(--heading);
-  font-size: 22px;
-  font-weight: 800;
-  letter-spacing: .18em;
-}
-
-/* Kulüp katılımı ve sponsorluk */
-
-.cta-band {
-  border-bottom: 1px solid #426447;
-  background: #183e29;
-}
-
-.cta-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, .7fr);
-  align-items: center;
-  gap: 56px;
-  padding: 68px 0;
-}
-
-.cta-title {
-  margin: 16px 0 24px;
-  font-size: clamp(34px, 4vw, 52px);
-  line-height: 1.08;
-}
-
-.cta-band p {
-  max-width: 690px;
-  margin-bottom: 0;
-  color: #d2e5d8;
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-.participation-actions {
-  display: grid;
-  gap: 14px;
-}
-
-.home-partners {
-  background: #101d16;
-}
-
-.partners-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  align-items: center;
-  gap: 64px;
-}
-
-.home-partners .section-copy {
-  margin-bottom: 28px;
-}
-
-.partner-options {
-  border-top: 1px solid #3c5343;
-}
-
-.partner-options article {
-  display: flex;
-  gap: 22px;
-  padding: 26px 0;
-  border-bottom: 1px solid #3c5343;
-}
-
-.partner-options h3 {
-  margin: 0 0 10px;
-  font-size: 23px;
-  line-height: 1.3;
-}
-
-.partner-options p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* Footer */
 
 .bgl-footer {
   border-top: 1px solid #324335;
@@ -665,7 +285,7 @@ h3 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, .65fr);
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr) minmax(0, 0.65fr);
   gap: 40px;
   padding: 56px 0 40px;
 }
@@ -687,7 +307,7 @@ h3 {
   font-family: var(--heading);
   font-size: 24px;
   font-weight: 800;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -713,18 +333,12 @@ h3 {
   color: var(--green);
 }
 
-.footer-icon-link[aria-disabled="true"] {
-  cursor: default;
-}
-
 .footer-icon {
   width: 24px;
   height: 24px;
   flex: 0 0 24px;
   object-fit: contain;
 }
-
-/* Mobil */
 
 @media (max-width: 860px) {
   .nav-links {
@@ -755,31 +369,6 @@ h3 {
     display: block;
   }
 
-  .hero {
-    min-height: auto;
-  }
-
-  .hero-grid,
-  .cta-inner,
-  .partners-grid,
-  .referee-partner-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-grid {
-    gap: 36px;
-    padding: 54px 0;
-  }
-
-  .hero-mark {
-    width: min(100%, 440px);
-  }
-
-  .participation-actions {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .footer-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -802,45 +391,8 @@ h3 {
     display: none;
   }
 
-  .hero-title {
-    font-size: clamp(38px, 10.5vw, 58px);
-  }
-
-  .hero-copy {
-    font-size: 17px;
-  }
-
-  .hero-mark {
-    width: min(100%, 360px);
-  }
-
-  .mission-grid,
   .footer-grid {
     grid-template-columns: 1fr;
-  }
-
-  .mission-card {
-    padding: 26px;
-  }
-
-  .participation-actions {
-    display: grid;
-  }
-
-  .referee-heading-row {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .referee-logo-area {
-    min-height: 330px;
-  }
-
-  .referee-logo-halo {
-    width: min(100%, 310px);
-  }
-
-  .footer-grid {
     gap: 30px;
     padding: 40px 0 30px;
   }

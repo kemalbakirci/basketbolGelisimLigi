@@ -411,3 +411,238 @@ h3 {
     transition: none !important;
   }
 }
+.home-matches {
+  overflow: hidden;
+  background: #f0f5ef;
+  color: #173c26;
+}
+
+.home-matches-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 76px 0 34px;
+}
+
+.home-matches-heading .eyebrow {
+  color: #306744;
+}
+
+.home-matches-heading h2 {
+  margin: 16px 0 0;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.05;
+}
+
+.matches-link {
+  color: #236d41;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.matches-link:hover {
+  color: #0c3e21;
+  text-decoration: underline;
+}
+
+.match-day-strip {
+  border-top: 1px solid #c4d8c7;
+  background: #f8fbf7;
+}
+
+.sunday-match-strip {
+  background: #e8f1e8;
+}
+
+.match-day-strip-inner {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 22px;
+  padding: 18px 0;
+}
+
+.match-date-card {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 2px;
+  min-height: 136px;
+  border: 1px solid #9abca2;
+  border-radius: 12px;
+  background: #183e29;
+  color: #fff;
+}
+
+.match-date-card strong {
+  color: var(--green);
+  font-family: var(--heading);
+  font-size: 42px;
+  line-height: 0.9;
+}
+
+.match-date-card span {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.match-date-card small {
+  color: #b9d8c1;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.mini-match-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 4%,
+    #000 96%,
+    transparent
+  );
+}
+
+.mini-match-track {
+  display: flex;
+  width: max-content;
+  gap: 14px;
+  padding: 2px 0;
+  animation: mini-match-scroll 28s linear infinite;
+}
+
+.reverse-mini-match-track {
+  animation-direction: reverse;
+}
+
+.mini-match-marquee:hover .mini-match-track {
+  animation-play-state: paused;
+}
+
+.mini-match-card {
+  display: grid;
+  width: 360px;
+  min-height: 132px;
+  flex: 0 0 360px;
+  grid-template-columns: minmax(0, 1fr) 76px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid #b4cdb8;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.mini-team {
+  display: grid;
+  min-width: 0;
+  justify-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.mini-team img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+.mini-team span {
+  color: #173c26;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.mini-match-time {
+  display: grid;
+  justify-items: center;
+  gap: 5px;
+  padding: 10px 4px;
+  border-right: 1px solid #d2e1d4;
+  border-left: 1px solid #d2e1d4;
+  text-align: center;
+}
+
+.mini-match-time strong {
+  color: #1f7745;
+  font-family: var(--heading);
+  font-size: 23px;
+  line-height: 1;
+}
+
+.mini-match-time span {
+  color: #a35e1b;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+@keyframes mini-match-scroll {
+  to {
+    transform: translateX(calc(-50% - 7px));
+  }
+}
+
+@media (max-width: 760px) {
+  .home-matches-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 58px 0 28px;
+  }
+
+  .match-day-strip-inner {
+    grid-template-columns: 86px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .match-date-card {
+    min-height: 120px;
+  }
+
+  .match-date-card strong {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 560px) {
+  .match-day-strip-inner {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .match-date-card {
+    min-height: 74px;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .match-date-card strong {
+    font-size: 30px;
+  }
+
+  .mini-match-card {
+    width: 292px;
+    min-height: 116px;
+    flex-basis: 292px;
+    grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+    padding: 12px 8px;
+  }
+
+  .mini-team img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .mini-team span {
+    font-size: 11px;
+  }
+
+  .mini-match-time strong {
+    font-size: 20px;
+  }
+}

@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Başkent Tesla Gelişim Ligi maç programları, yaş kategorileri, karşılaşma saatleri ve salon bilgileri yakında burada.">
+  <meta
+    name="description"
+    content="Başkent Tesla Gelişim Ligi fikstürü, maç sonuçları ve puan durumu."
+  >
   <title>Fikstür | Başkent Tesla Gelişim Ligi</title>
 
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="fixtures.css">
 
   <script src="home.js" defer></script>
+
+  <script
+    src="https://widget.nbn23.com/widget-react.js.gz"
+    type="text/javascript"
+  ></script>
 </head>
 
 <body class="home-page fixtures-page">
@@ -22,6 +30,7 @@
           <span class="logo-wrap">
             <img src="assets/images/bgl_logo.png" alt="" width="56" height="56">
           </span>
+
           <span class="brand-name">
             Başkent Tesla
             <span>Gelişim Ligi</span>
@@ -35,15 +44,6 @@
         </nav>
 
         <div class="header-actions">
-          <a
-            class="join-button"
-            href="https://wa.me/905323351001"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Bize Katılın
-          </a>
-
           <button
             id="menuButton"
             class="menu-button"
@@ -59,84 +59,62 @@
     </header>
 
     <main id="app">
-      <section class="inner-hero" aria-labelledby="fixtures-title">
+      <section class="widget-section" aria-labelledby="widget-title">
         <div class="site-width">
-          <span class="eyebrow">MAÇ MERKEZİ</span>
+          <div class="widget-heading">
+            <div>
+              <span class="eyebrow">SWISH MAÇ MERKEZİ</span>
 
-          <h1 id="fixtures-title" class="section-title">
-            Fikstür <span>Çok Yakında.</span>
-          </h1>
+              <h2 id="widget-title" class="section-title">
+                Fikstür, Sonuçlar ve<br>
+                Puan Durumu
+              </h2>
 
-          <p class="section-copy">
-            Maç programları, yaş kategorileri, karşılaşma saatleri ve salon
-            bilgileri yakında burada yayınlanacak.
-          </p>
+              <p class="section-copy">
+                Ligimizdeki tüm karşılaşmaları, güncel sonuçları ve sıralamayı
+                tek noktadan takip edin.
+              </p>
+            </div>
+          </div>
+
+          <div class="widget-shell">
+            <div id="nbn23-widget" aria-live="polite">
+              <p class="widget-loading">Maç merkezi yükleniyor...</p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="clubs-cta fixture-social-cta" aria-labelledby="follow-title">
         <div class="site-width">
-          <div class="fixture-stage fixture-teaser" aria-hidden="true">
-            <div class="court-lines">
-              <span class="court-circle"></span>
-              <span class="court-midline"></span>
-              <span class="court-key court-key-left"></span>
-              <span class="court-key court-key-right"></span>
-            </div>
+          <h2 id="follow-title" class="section-title">
+            Güncel Kalın
+          </h2>
 
-            <div class="fixture-scoreboard">
-              <span class="scoreboard-label">BAŞKENT TESLA GELİŞİM LİGİ</span>
+          <p class="section-copy">
+            Fikstür, maç sonuçları ve lig duyurularını Instagram ve YouTube
+            hesaplarımızdan takip edebilirsiniz.
+          </p>
 
-              <strong>
-                MAÇ GÜNÜ<br>
-                YAKLAŞIYOR
-              </strong>
+          <div class="button-row fixture-actions">
+            <a
+              class="primary-button"
+              href="https://www.instagram.com/baskentgelisimligi/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram’da Takip Et
+            </a>
 
-              <span class="scoreboard-status">
-                <i></i>
-                FİKSTÜR HAZIRLANIYOR
-              </span>
-            </div>
-
-            <div class="basketball-animation">
-              <span class="ball-shadow"></span>
-              <span class="fixture-ball"></span>
-            </div>
-
-            <span class="court-corner corner-one"></span>
-            <span class="court-corner corner-two"></span>
+            <a
+              class="secondary-button"
+              href="https://www.youtube.com/@baskentgelisimligi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              YouTube Kanalımız
+            </a>
           </div>
-
-          <section class="clubs-cta" aria-labelledby="follow-title">
-            <h2 id="follow-title" class="section-title">
-              Güncel Kalın
-            </h2>
-
-            <p class="section-copy">
-              Fikstür, maç sonuçları ve lig duyurularını Instagram ve YouTube
-              hesaplarımızdan takip edebilirsiniz.
-            </p>
-
-            <div class="button-row fixture-actions">
-              <a
-                class="primary-button"
-                href="https://www.instagram.com/baskentgelisimligi/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Instagram’da Takip Et
-              </a>
-
-              <a
-                class="secondary-button"
-                href="https://www.youtube.com/@baskentgelisimligi"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                YouTube Kanalımız
-              </a>
-            </div>
-          </section>
         </div>
       </section>
     </main>
@@ -253,5 +231,28 @@
       </div>
     </footer>
   </div>
+
+  <script>
+    window.addEventListener("load", function () {
+      const widgetMount = document.getElementById("nbn23-widget");
+
+      if (!window.swish_widget_app) {
+        widgetMount.innerHTML =
+          "<p class='widget-error'>Maç merkezi şu anda yüklenemedi. Lütfen daha sonra tekrar deneyin.</p>";
+        return;
+      }
+
+      swish_widget_app.init({
+        mountOn: "nbn23-widget",
+        apiKey: "5a527a4b-56e7-4606-a485-b9995bd9fd50",
+        backgroundColor: "#ffffff"
+
+        /*
+          NBN23 özel bir tema adı verdiyse buraya ekleyebilirsin:
+          theme: "NBN23_TARAFINDAN_VERİLEN_TEMA"
+        */
+      });
+    });
+  </script>
 </body>
 </html>
